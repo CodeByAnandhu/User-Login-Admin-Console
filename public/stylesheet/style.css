@@ -1,0 +1,337 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+body {
+    padding: 50px;
+    font-family: 'Poppins', sans-serif;
+    background-image: url(/img/pexels-johannes-plenio-1103970.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+  }
+  
+  h3{
+    color: aliceblue;
+  }
+  a {
+    color: #00B7FF;
+  }
+  
+  .wrapper {
+    margin-top: 100px;
+    margin-bottom: 20px;
+  }
+  
+  .form-signin {
+    max-width: 550px;
+    padding: 10px 0px 60px;
+    margin: 0 auto;
+    background-color: #ebeae600;
+    /* border: 3px dotted rgba(0,0,0,0.1); */
+  }
+  
+  .form-signin-heading {
+    text-align:center;
+    margin-bottom: 30px;
+    
+  }
+  
+  .form-control {
+    position: relative;
+    font-size: 16px;
+    height: auto;
+    padding: 10px;
+background: rgba(255, 255, 255, 0);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5.2px);
+-webkit-backdrop-filter: blur(5.2px);
+border: 1px solid rgba(255, 255, 255, 0.74);
+  }
+  
+  input[type="text"] {
+    margin-bottom: 10px;
+    /* border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0; */
+    /* background-color: transparent; */
+  }
+  
+  input[type="password"] {
+    margin-bottom: 40px;
+    /* border-top-left-radius: 0;
+    border-top-right-radius: 0; */
+  }
+   .row p a {
+     color: #00B7FF;
+    text-decoration: underline; 
+  }
+  .text-white {
+    color: white;
+  }
+  .home-div{
+    margin-top: 410px;
+  }
+  .content{
+    background-color: #eceaea4f;
+    border-radius: 15px;
+    padding: 20px
+   
+  }
+  .Delete{
+    background-color: #FFFFFF;
+  border: 0;
+  border-radius: .5rem;
+  box-sizing: border-box;
+  color: #111827;
+  font-family: "Inter var",ui-sans-serif,system-ui,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 1.25rem;
+  padding: .75rem 1rem;
+  text-align: center;
+  text-decoration: none #D1D5DB solid;
+  text-decoration-thickness: auto;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  }
+  .Delete:hover {
+    background-color: rgb(249,250,251);
+  }
+  
+  .Delete:focus {
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+  }
+  .Delete:focus-visible {
+    box-shadow: none;
+  }
+
+
+  .EDIT{
+    background-color: #FFFFFF;
+  border: 0;
+  border-radius: .5rem;
+  box-sizing: border-box;
+  color: #111827;
+  font-family: "Inter var",ui-sans-serif,system-ui,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 1.25rem;
+  padding: .75rem 1rem;
+  text-align: center;
+  text-decoration: none #D1D5DB solid;
+  text-decoration-thickness: auto;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  }
+  .EDIT:hover {
+    background-color: rgb(249,250,251);
+  }
+  
+  .EDIT:focus {
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+  }
+  .EDIT:focus-visible {
+    box-shadow: none;
+  }
+
+  .BLOCK{
+
+    background-color: #FFFFFF;
+    border: 0;
+    border-radius: .5rem;
+    box-sizing: border-box;
+    color: #111827;
+    font-family: "Inter var",ui-sans-serif,system-ui,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    font-size: 10px;
+    font-weight: 600;
+    line-height: 1.25rem;
+    padding: .75rem 1rem;
+    text-align: center;
+    text-decoration: none #D1D5DB solid;
+    text-decoration-thickness: auto;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+
+  .BLOCK:hover {
+    background-color: rgb(249,250,251);
+  }
+  
+  .BLOCK:focus {
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+  }
+  .BLOCK:focus-visible {
+    box-shadow: none;
+  }
+
+  .ADDUSER{
+
+    background-color: #fff;
+    border: 0 solid #e2e8f0;
+    border-radius: 1.5rem;
+    box-sizing: border-box;
+    color: #0d172a;
+    cursor: pointer;
+    display: inline-block;
+    font-family: "Basier circle",-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1;
+    padding: 1rem 1.6rem;
+    text-align: center;
+    text-decoration: none #0d172a solid;
+    text-decoration-thickness: auto;
+    transition: all .1s cubic-bezier(.4, 0, .2, 1);
+    box-shadow: 0px 1px 2px rgba(166, 175, 195, 0.25);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+
+  .ADDUSER:hover {
+    background-color: #1e293b;
+    color: #fff;
+  }
+  @media (min-width: 768px) {
+    .ADDUSER {
+      font-size: 12px;
+      padding: 1rem 2rem;
+    }
+  }
+  .LOGOUT{
+    background-color: #fff;
+    border: 0 solid #e2e8f0;
+    border-radius: 1.5rem;
+    box-sizing: border-box;
+    color: #0d172a;
+    cursor: pointer;
+    display: inline-block;
+    font-family: "Basier circle",-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1;
+    padding: 1rem 1.6rem;
+    text-align: center;
+    text-decoration: none #0d172a solid;
+    text-decoration-thickness: auto;
+    transition: all .1s cubic-bezier(.4, 0, .2, 1);
+    box-shadow: 0px 1px 2px rgba(166, 175, 195, 0.25);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+
+  .LOGOUT:hover{
+    background-color: #1e293b;
+    color: #fff;
+  }
+  @media (min-width: 768px) {
+    .LOGOUT {
+      font-size: 12px;
+      padding: 1rem 2rem;
+    }
+  }
+
+  
+  .table-striped.table-light td {
+    
+    border: none;
+  }
+  
+  
+  .table-striped.table-light thead th {
+    border: none; 
+    
+  }
+  .LoginButton{
+    appearance: none;
+    background-color: #000000;
+    border: 2px solid #1A1A1A;
+    border-radius: 30px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    font-size: 16px;
+    font-weight: 600;
+    line-height: normal;
+    margin: 0;
+    min-height: 60px;
+    min-width: 0;
+    outline: none;
+    padding: 16px 24px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: 100%;
+    will-change: transform;
+  }
+
+  .LoginButton:disabled {
+    pointer-events: none;
+  }
+  
+  .LoginButton:hover {
+    color: #fff;
+    background-color: #1A1A1A;
+    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+    transform: translateY(-2px);
+  }
+  
+  .LoginButton:active {
+    box-shadow: none;
+    transform: translateY(0);
+  }
+
+  .form-control.ml-2 {
+
+    background-color:rgba(255, 255, 255, 0.64);
+    /* border-color: #FFFFFF; */
+  }
+
+  .wrapper{
+
+    background-color: #ffffff46;
+    width: 600px; 
+    margin: auto; 
+    padding: 50px; 
+    margin-top: 76px; 
+    border-radius: 20px;
+    margin-left: 265px;
+  }
+
+  .row.justify-content-center {
+    margin-top:15px ;
+  
+}
+.home-div {
+  /* margin: 0 auto;  */
+  text-align: center; 
+  margin-top: 235px;
+  background-color: rgba(255, 255, 255, 0.089);
+  border: 1px solid rgba(255, 255, 255, 0.74);
+  width: 450px;
+
+
+  border: 20px ; 
+  padding: 20px; 
+  text-align: center;
+  box-sizing: border-box;
+
+  border-radius: 20px;
+}

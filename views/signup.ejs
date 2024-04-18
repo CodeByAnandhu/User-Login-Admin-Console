@@ -1,0 +1,38 @@
+<%-include('header')-%>
+<div class="container">
+  <div class="col-md-4 mx-auto">
+    <% if (typeof message !== 'undefined') { %>
+    <div class="alert alert-danger text-center"><%= message %></div>
+    <% } %> <% if (typeof loginmessage !== 'undefined') { %>
+    <div class="alert alert-success text-center"><%= loginmessage %></div>
+    <% } %>
+  </div>
+  <div class="wrapper" style="color: aliceblue">
+    <div class="form-signin">
+      <h3 class="form-signin-heading">Welcome! Please SignUp</h3>
+      <form action="/signup" method="post">
+        <div class="form-group">
+          <label>Username:</label>
+          <input class="form-control" type="text" name="username" />
+        </div>
+        <div class="form-group">
+          <label>Email:</label>
+          <input class="form-control" type="email" name="email" />
+        </div>
+        <div class="form-group">
+          <label>Password:</label>
+          <input class="form-control" type="password" name="password" />
+        </div>
+        <div class="form-group">
+          <input class="LoginButton" type="submit" value="Sign Up" />
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-md-12 text-center">
+            <p class="row p">Already a user? <a href="/">Login here</a></p>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <%-include('footer')-%>
+</div>

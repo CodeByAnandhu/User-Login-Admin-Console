@@ -1,0 +1,51 @@
+<%-include('header') %>
+<div class="container">
+  <div class="col-md-4 mx-auto">
+    <% if (typeof message !== 'undefined') { %>
+    <div class="alert alert-danger text-center"><%= message %></div>
+    <% } %> <% if (typeof loginmessage !== 'undefined') { %>
+    <div class="alert alert-success text-center"><%= loginmessage %></div>
+    <% } %>
+  </div>
+  <div class="container">
+    <div class="wrapper">
+      <form
+        action="/admin/login"
+        method="post"
+        name="Admin_Login_Form"
+        class="form-signin"
+      >
+        <h3 class="form-signin-heading ">Admin Login</h3>
+
+        <input
+          type="text"
+          class="form-control"
+          name="username"
+          placeholder="Username"
+        />
+        <br />
+        <input
+          type="password"
+          class="form-control"
+          name="password"
+          placeholder="Password"
+        />
+        <button
+          class="LoginButton btn-block"
+          name="Submit"
+          value="Login"
+          type="Submit"
+        >
+          Login
+        </button>
+        <br />
+        <div class="row justify-content-center">
+          <div class="col-md-12 text-center">
+            <p style="color: white">Not an admin? <a href="/">User Login</a></p>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <%-include('footer') %>
+</div>

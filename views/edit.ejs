@@ -1,0 +1,67 @@
+<%-include('header') %>
+<div class="container">
+  <div class="page-content">
+    <div class="form-v9-content">
+      <form
+        class="form-detail"
+        action="/admin/edit/<%= item._id %>"
+        method="post"
+      >
+        <h2 style="color: rgb(0, 0, 0)">UPDATE THE DETAILS</h2>
+        <div class="form-row-total">
+          <div class="form-row">
+            <input
+              style="background-color: rgb(255, 255, 255); border: none"
+              type="text"
+              name="_id"
+              id="_id"
+              class="form-control input-text"
+              placeholder="User_id"
+              value="<%= item._id %>"
+              required
+            />
+          </div>
+          <br />
+          <div class="form-row">
+            <input
+              style="background-color: rgb(255, 255, 255); border: none"
+              type="text"
+              name="username"
+              id="username"
+              class="form-control input-text"
+              placeholder="Your Name"
+              value="<%= item.username %>"
+              required
+            />
+          </div>
+        </div>
+        <br />
+        <div class="form-row-total">
+          <div class="form-row">
+            <input
+              style="background-color: rgb(255, 255, 255); border: none"
+              type="email"
+              name="email"
+              id="email"
+              class="form-control input-text"
+              placeholder="Your email"
+              value="<%= item.email %>"
+              required
+            />
+          </div>
+        </div>
+        <br />
+
+        <div class="form-row-last">
+          <input
+            type="submit"
+            name="UPDATE"
+            class="LOGOUT UPDATE"
+            value="UPDATE"
+          />
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<%- include('footer') %>

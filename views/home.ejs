@@ -1,0 +1,12 @@
+<%-include('header')-%>
+
+<div class="container text-center mt-5 home-div">
+  <h1 class="display-4 text-white">
+    <span style="color: rgb(0, 0, 0)">Welcome</span> <br />
+    <%= user ? user : 'User' %> <br />
+  </h1>
+  <p class="lead text-white">Are you here!</p>
+  <a href="/logout" class="LOGOUT">Logout</a>
+</div>
+
+<%-include('footer')-%>

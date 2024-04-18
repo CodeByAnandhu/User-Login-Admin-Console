@@ -1,0 +1,119 @@
+<%- include('header') %>
+
+<div class="container" style="padding: 2%">
+  <div class="d-flex justify-content-between">
+    <div>
+      <h1 class="text-center text-white">Welcome Admin</h1>
+    </div>
+  </div>
+</div>
+
+<div class="content">
+  <div class="container">
+    <h2 class="mb-5">USER TABLE</h2>
+    <input
+      type="text"
+      class="form-control ml-2"
+      id="search"
+      name="search"
+      placeholder="Search User"
+      oninput="searchUser()"
+    />
+    <div class="table-responsive">
+      <table class="table table-light"> 
+        <thead>
+          <tr>
+            <th scope="col">User_Id</th>
+            <th scope="col">UserName</th>
+            <th scope="col">Email</th>
+            <th scope="col">password</th>
+          </tr>
+        </thead>
+        <tbody id="userTableBody">
+          <% users.forEach((item) => { %>
+          <tr>
+            <td><%= item._id %></td>
+            <td><%= item.username %></td>
+            <td><%= item.email %></td>
+            <td><%= item.password %></td>
+            <td>
+              <button type="submit" class="EDIT">
+                <a style="color: black" href="/admin/edit/<%= item._id %>"
+                  >EDIT</a
+                >
+              </button>
+              <button type="submit" class="Delete">
+                <a style="color: black" href="/admin/delete/<%= item._id %>" onclick="checker()"
+                  >DELETE</a
+                >
+              </button>
+              
+              <button type="submit" class="BLOCK" >
+                <a style="color: black" href="/admin/block/<%= item._id %> "  
+                  >BLOCK</a
+                >
+              </button>
+            </td>
+          </tr>
+          <% }) %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="col-text-right">
+    <a href="/admin/signup" class="ADDUSER" style="margin-right: 180px"
+      >Add user</a
+    >
+  </div>
+  <div class="col text-right">
+    <a href="/admin/logout" class="LOGOUT" style="margin-right: 80px"
+      >Logout</a
+    >
+  </div>
+</div>
+
+<script>
+
+  function checker() {
+      const result = confirm('Are You Sure Want to Delete?');
+      if (result == false) {
+        event.preventDefault()
+      }
+    }
+    
+  function searchUser() {
+      const searchInput = document.getElementById('search').value;
+  
+      // Make an AJAX request to server with the search query
+      fetch(`/admin/search?search=${searchInput}`)
+          .then(response => response.json())
+          .then(data => {
+              // Update the table with the received data
+              const userTableBody = document.getElementById('userTableBody');
+             
+              userTableBody.innerHTML = ''; // Clear the existing table data
+  
+              data.forEach(user => {
+                  const row = document.createElement('tr');
+                  row.innerHTML = `
+                     <td>${user._id}</td>
+                      <td>${user.username}</td>
+                      <td>${user.email}</td>
+                      <td>${user.password}</td>
+                      <td>
+                          <a href="/admin/edit/${user._id}" class="EDIT">Edit</a>
+                          <button type="submit" class="Delete" onclick="deleteUser('${user._id}')">Delete</button>
+                      </td>
+                  `;
+                  userTableBody.appendChild(row);
+              });
+          })
+          .catch(error => {
+              console.error('Error:', error);
+          });
+  }
+      
+  </script>
+  
+
+<%- include('footer') %>
